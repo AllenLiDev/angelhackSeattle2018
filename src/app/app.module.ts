@@ -12,6 +12,8 @@ import { HikeOnePage } from '../pages/hike-one/hike-one';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,7 +25,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAR71-cZ_Nm6Av6III9NW239NMqCHKWlY0'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

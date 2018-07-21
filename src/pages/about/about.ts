@@ -10,7 +10,7 @@ export class AboutPage {
 
   constructor(public navCtrl: NavController) {
 
-  }
+  }  
 
   goToHike(number) {
     console.log("did it");
