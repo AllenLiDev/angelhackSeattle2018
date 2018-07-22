@@ -6,84 +6,84 @@
 -->
 <ion-content padding>
 
-  </ion-content>
-  
-  <ion-header>
-      <ion-navbar>
-        <ion-title>Burnaby Mountain</ion-title>
-      </ion-navbar>
-    </ion-header>
-    
-    <ion-content>
-      <ion-list no-border>
-    
-        <ion-item>
-          <ion-icon name='speedometer' item-start></ion-icon>
-          Difficulty
-          <ion-note item-end>
-          Easy
-          </ion-note>
-        </ion-item>
-    
-        <ion-item>
-          <ion-icon name='timer' item-start></ion-icon>
-          Time
-          <ion-note item-end>
-          4 hours
-          </ion-note>
-        </ion-item>
-    
-        <ion-item>
-          <ion-icon name='git-compare' item-start></ion-icon>
-          Round-Trip
-          <ion-icon item-end>
-            3.2 km
-          </ion-icon>
-        </ion-item>
-  
-        <ion-item>
-          <ion-icon name='trending-up' item-start></ion-icon>
-          Elevation
-          <ion-note item-end>300 m</ion-note>
-        </ion-item>
-  
-        <ion-item>
-          <ion-icon name='home' item-start></ion-icon>
-          Camping
-          <ion-icon item-end>
-            No
-          </ion-icon>
-        </ion-item>
-    
-        <ion-item>
-          <ion-icon name='logo-freebsd-devil' item-start></ion-icon>
-          Dog Friendly
-          <ion-note item-end>
-          On-Leash
-          </ion-note>
-        </ion-item>
-  
-        <ion-item>
-          <ion-icon name='thunderstorm' item-start></ion-icon>
-          Weather
-          <ion-note item-end>{{wxPhraseLong}}</ion-note>
-        </ion-item>
-    
-        <ion-item>
-            <ion-icon name='cloud-circle' item-start></ion-icon>
-            Temperature
-            <ion-note item-end>
-            {{temperature}}
-            </ion-note>
-          </ion-item>
-    
-      </ion-list>
-      
-      <div>
-      <button ion-button color="light" float-left>
-        <ion-item>
-        <ion-icon name='pin' item-start></ion-icon>
-        View Maps
-      </ion-item>
-      </button>
-    </div>
+</ion-content>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Burnaby Mountain</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+  <ion-list no-border>
+
+    <ion-item-divider>Hike Details</ion-item-divider>
+
+    <ion-item>
+      <ion-icon name='stats' item-start></ion-icon>
+      Difficulty
+      <div item-end>
+        Easy
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='timer' item-start></ion-icon>
+      Time
+      <div item-end>
+        4 hours
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='git-compare' item-start></ion-icon>
+      Round-Trip
+      <div item-end>
+        3.2 km
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='trending-up' item-start></ion-icon>
+      Elevation
+      <div item-end>300 m</div>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='home' item-start></ion-icon>
+      Camping
+      <div item-end>
+        No
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='logo-android' item-start></ion-icon>
+      Dog Friendly
+      <div item-end>
+        On-Leash
+      </div>
+    </ion-item>
+
+    <ion-item-divider>Current Conditions</ion-item-divider>
+
+    <ion-item>
+      <ion-icon name='thunderstorm' item-start></ion-icon>
+      Weather
+      <div item-end>{{wxPhraseLong}}</div>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='cloud-circle' item-start></ion-icon>
+      Temperature
+      <div item-end>
+        {{temperature}}
+      </div>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button round color="secondary" (click)="hikeOne()">
+    Let's Summit!
+  </button>
+</ion-content>

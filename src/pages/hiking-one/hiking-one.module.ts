@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { HikeThreePage } from './hike-three';
+import { HikingOnePage } from './hiking-one';
 
 @NgModule({
   declarations: [
-    HikeThreePage,
+    HikingOnePage,
   ],
   imports: [
-    IonicPageModule.forChild(HikeThreePage),
+    IonicPageModule.forChild(HikingOnePage),
   ],
 })
-export class HikeThreePageModule {}
+export class HikingOnePageModule {}

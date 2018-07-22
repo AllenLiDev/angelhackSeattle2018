@@ -5,12 +5,12 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HikeOnePage } from '../pages/hike-one/hike-one';
 import { HikeTwoPage } from '../pages/hike-two/hike-two';
-import { HikeThreePage } from '../pages/hike-three/hike-three';
+import { HikingOnePage } from '../pages/hiking-one/hiking-one';
+import { HikingTwoPage } from '../pages/hiking-two/hiking-two';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,12 +20,12 @@ import { IbmWeatherProvider } from '../providers/ibm-weather/ibm-weather';
   declarations: [
     MyApp,
     AboutPage,
-    ContactPage,
     HomePage,
     TabsPage,
     HikeOnePage,
     HikeTwoPage,
-    HikeThreePage
+    HikingOnePage,
+    HikingTwoPage
   ],
   imports: [
     BrowserModule,
@@ -36,12 +36,12 @@ import { IbmWeatherProvider } from '../providers/ibm-weather/ibm-weather';
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
     HomePage,
     TabsPage,
     HikeOnePage,
     HikeTwoPage,
-    HikeThreePage
+    HikingOnePage,
+    HikingTwoPage
   ],
   providers: [
     StatusBar,

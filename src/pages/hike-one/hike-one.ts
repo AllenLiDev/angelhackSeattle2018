@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { IbmWeatherProvider } from '../../providers/ibm-weather/ibm-weather';
+import { HikingTwoPage } from '../hiking-two/hiking-two';
 
 /**
  * Generated class for the HikeOnePage page.
@@ -30,7 +31,10 @@ export class HikeOnePage {
       this.wxPhraseLong = res.wxPhraseLong;
     });
     console.log('ionViewDidLoad HikeOnePage');
+  }
 
+  hikeOne() {
+    this.navCtrl.push(HikingTwoPage);
   }
 
 }
