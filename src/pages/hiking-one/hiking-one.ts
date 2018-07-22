@@ -175,13 +175,14 @@ export class HikingOnePage {
 
   // gets user location and internet then adds to local array of saved info
   getLocation(map, line) {
-    navigator.geolocation.getCurrentPosition(position => {
+
+    var success = (pos) => {
       // var curPos = {
       //   lat: position.coords.latitude,
       //   lng: position.coords.longitude
       // };
       var data = {
-        cord: position.coords,
+        cord: pos.coords,
         online: navigator.onLine
       }
 
@@ -199,18 +200,22 @@ export class HikingOnePage {
 
       // simulated good hiking
       this.pos.push(this.simulationOne[this.simulatedCount]);
-
       this.lastLoc = this.pos[this.pos.length - 1].lat.toString().substr(0, 10) + ", " + this.pos[this.pos.length - 1].lng.toString().substr(0, 10);
       this.lastOnline = this.currentTripLocation[this.currentTripLocation.length - 1].online ? "online" : "offline";
-
       // actual hiking
       //map.setCenter(curPos);
-
       // simulated case 1
       map.setCenter(this.simulationOne[this.simulatedCount]);
       this.simulatedCount++;
       line.setPath(this.pos);
-    });
+    }
+
+    function onError(error) {
+      alert('code: '    + error.code    + '\n' +
+            'message: ' + error.message + '\n');
+    }
+
+    navigator.geolocation.getCurrentPosition(success, onError, { maximumAge: 3000, timeout: 35000, enableHighAccuracy: true });
   }
 }
 
