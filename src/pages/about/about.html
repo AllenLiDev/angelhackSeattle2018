@@ -6,33 +6,59 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
 
   <ion-card (click)="goToHike(1)">
-    <ion-card-header>
-      HIKE 1 NAME
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      HIKE 2 Name
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
+    <img src="../../assets/imgs/chief.jpg">
+    <div class="card-title">Stawamus Chief</div>
+    <div class="card-subtitle">Squamish, BC V0N 1T0, Canada</div>
+    <ion-item>
+      <span item-start>18 min</span>
+      <span item-start>(2.6 km)</span>
+      <button ion-button icon-start clear item-end>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>
 
-  <ion-card>
-    <ion-card-header>
-      Hike 3 name
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
+</ion-card>
 
+<ion-card (click)="goToHike(2)">
+
+  <img src="../../assets/imgs/burnaby-mountain.jpg">
+  <div class="card-title">Burnaby Mountain</div>
+  <div class="card-subtitle">University Dr E</div>
+  <ion-item>
+    <span item-start>3 hours</span>
+    <span item-start>(3.2 km)</span>
+    <button ion-button icon-start clear item-end>
+      <ion-icon name="navigate"></ion-icon>
+      Start
+    </button>
+  </ion-item>
+
+</ion-card>
+
+<ion-card (click)="goToHike(3)">
+
+  <img src="../../assets/imgs/mount-seymour.jpg">
+  <div class="card-title">Mount Seymour Provincial Park</div>
+  <div class="card-subtitle">Mt Seymour Rd, North Vancouver, BC V7G 1L3, Canada</div>
+  <ion-item>
+    <span item-start>1.5</span>
+    <span item-start>(1.6 km)</span>
+    <button ion-button icon-start clear item-end>
+      <ion-icon name="navigate"></ion-icon>
+      Start
+    </button>
+  </ion-item>
+
+</ion-card>
+
+    <button ion-button icon-start clear item-end>
+      <ion-icon name="navigate"></ion-icon>
+      Start
+    </button>
+  
 </ion-content>
