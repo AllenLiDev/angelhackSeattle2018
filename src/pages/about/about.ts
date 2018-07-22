@@ -13,7 +13,7 @@ export class AboutPage {
 
   constructor(public navCtrl: NavController, public ibmWeather: IbmWeatherProvider) {
 
-  }
+  }  
 
   goToHike(number) {
     console.log("did it");

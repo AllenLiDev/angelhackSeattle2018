@@ -7,11 +7,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <div id="map"></div>
+  <ion-item>
+    <ion-icon name="locate" item-start></ion-icon>
+    {{lastLoc}}
+    <ion-badge item-end>{{lastOnline}}</ion-badge>
+  </ion-item>
+  <ion-row center>
+    <ion-col text-right>
+      <button ion-button color="primary" (click)="endHike()">End Hike</button>
+    </ion-col>
+    <ion-col text-leftr>
+      <button ion-button color="danger" (click)="lost()">I'm Lost</button>
+    </ion-col>
+  </ion-row>
 </ion-content>
