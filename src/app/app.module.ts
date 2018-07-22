@@ -16,8 +16,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IbmWeatherProvider } from '../providers/ibm-weather/ibm-weather';
 
-import { AgmCoreModule } from '@agm/core';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -32,9 +30,6 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAR71-cZ_Nm6Av6III9NW239NMqCHKWlY0'
-    }),
     HttpModule
   ],
   bootstrap: [IonicApp],
