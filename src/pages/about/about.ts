@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HikeOnePage } from '../hike-one/hike-one';
+import { HikeTwoPage } from '../hike-two/hike-two';
+import { HikeThreePage } from '../hike-three/hike-three';
+import { IbmWeatherProvider } from '../../providers/ibm-weather/ibm-weather';
 
 @Component({
   selector: 'page-about',
@@ -8,7 +11,7 @@ import { HikeOnePage } from '../hike-one/hike-one';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public ibmWeather: IbmWeatherProvider) {
 
   }  
 
@@ -16,6 +19,12 @@ export class AboutPage {
     console.log("did it");
     if (number === 1) {
       this.navCtrl.push(HikeOnePage);
+    }
+    else if (number === 2) {
+      this.navCtrl.push(HikeTwoPage);
+    }
+    else if (number === 3) {
+      this.navCtrl.push(HikeThreePage);
     }
   }
 
