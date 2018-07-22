@@ -17,6 +17,7 @@ import { IbmWeatherProvider } from '../../providers/ibm-weather/ibm-weather';
 export class HikeOnePage {
 
   temperature: number;
+  wxPhraseLong: String;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public ibmWeather: IbmWeatherProvider) {
   }
@@ -25,8 +26,9 @@ export class HikeOnePage {
   ionViewDidLoad() {
     this.ibmWeather.getWeather(49.686249, -123.139635).subscribe(res => {
       console.log(res);
-      this.temperature=res.temperature;
-      });
+      this.temperature = res.temperature;
+      this.wxPhraseLong = res.wxPhraseLong;
+    });
     console.log('ionViewDidLoad HikeOnePage');
 
   }
