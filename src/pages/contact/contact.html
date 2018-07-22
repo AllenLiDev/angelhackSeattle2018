@@ -9,9 +9,14 @@
 <ion-content>
   <div id="map"></div>
   <ion-item>
+    <ion-icon name="wifi" item-start></ion-icon>
+    <div>Network</div>
+    <div item-end>{{lastOnline}}</div>
+  </ion-item>
+  <ion-item>
     <ion-icon name="locate" item-start></ion-icon>
-    {{lastLoc}}
-    <ion-badge item-end>{{lastOnline}}</ion-badge>
+    <div>Location</div>
+    <div item-end>{{lastLoc}}</div>
   </ion-item>
   <ion-row center>
     <ion-col text-right>

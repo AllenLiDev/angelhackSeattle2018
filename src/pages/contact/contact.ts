@@ -14,10 +14,10 @@ export class ContactPage {
   lastLoc: String;
   lastOnline: String;
   id: number;
+
   lineSymbol = {
     path: 'M 0,-1 0,1',
     strokeOpacity: 1,
-    strokeColor: '#292',
     scale: 4
   };
   linesGreen = {
